@@ -42,16 +42,26 @@ nums = [4, 3, 10, 9, 8]
 # print(f' final list is upgrade :{sub}')
 
 
-numh = [4, 3, 10, 9, 8]
-# output=[10,9]
-numh.sort(reverse=True)
-total = sum(numh)
+# numh = [4, 3, 10, 9, 8]
+# # output=[10,9]
+# numh.sort(reverse=True)
+# total = sum(numh)
 
-serq = []
-count = 0
-for x in numh:
-    serq.append(x)
-    count += x
-    if count > total-count:
-        break
-print(serq)
+# serq = []
+# count = 0
+# for x in numh:
+#     serq.append(x)
+#     count += x
+#     if count > total-count:
+#         break
+# print(serq)
+
+
+nums1 = [2, 5, 7, 3]
+run1 = 0
+current = 0  # current=zero ye dono barabar he
+for i in nums1:
+    print(f' \nthis is i:{i}')
+    current = i
+    run1 += i
+    print(f'\n run1+=i:{run1} and Current = i : {current}')
