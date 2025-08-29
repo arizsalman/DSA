@@ -84,36 +84,52 @@
 
 '''leetcode Question no 167  =numbers = [2,7,11,15] output =[1,2]'''
 
-numbers = [2, 7, 11, 15]
-# output =[1,2]
+# numbers = [2, 7, 11, 15]
+# # output =[1,2]
 
 
-def twoSum(numbers, target):
-    seem = {}
-    for i, num in enumerate(numbers):
-        complete = target-num
-        if complete in seem:
-            return [seem[complete]+1, i+1]
-        seem[num] = i
+# def twoSum(numbers, target):
+#     seem = {}
+#     for i, num in enumerate(numbers):
+#         complete = target-num
+#         if complete in seem:
+#             return [seem[complete]+1, i+1]
+#         seem[num] = i
 
 
-print(twoSum([2, 7, 11, 15], 9))
+# print(twoSum([2, 7, 11, 15], 9))
 
 
-# Input: nums = [8,1,2,2,3]
-# Output: [4,0,1,1,3]
-def sum(nums):
-    sets = []
-    for i in nums:
-        # print(i)
-        count = 0
-        for j in nums:
-            # print(j)
-            if j < i:
-                count += 1
-                # print(f'count is {count}')
-        sets.append(count)
-    return sets
+# # Input: nums = [8,1,2,2,3]
+# # Output: [4,0,1,1,3]
+# def sum(nums):
+#     sets = []
+#     for i in nums:
+#         # print(i)
+#         count = 0
+#         for j in nums:
+#             # print(j)
+#             if j < i:
+#                 count += 1
+#                 # print(f'count is {count}')
+#         sets.append(count)
+#     return sets
 
 
-print(sum(nums=[8, 1, 2, 2, 3]))
+# print(sum(nums=[8, 1, 2, 2, 3]))
+
+# arr = [10, 2, 5, 3]
+def equal(arr):
+    for i in range(len(arr)):
+        # print(f'the value is i :{i}')
+        for j in range(len(arr)):
+            # print(f'the value is j :{j}')
+            if i != j and arr[i] == 2*arr[j]:
+                return True
+    return False
+
+
+print(equal(arr=([10, 2, 5, 3])))
+
+
+
