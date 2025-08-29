@@ -119,17 +119,62 @@
 # print(sum(nums=[8, 1, 2, 2, 3]))
 
 # arr = [10, 2, 5, 3]
-def equal(arr):
-    for i in range(len(arr)):
-        # print(f'the value is i :{i}')
-        for j in range(len(arr)):
-            # print(f'the value is j :{j}')
-            if i != j and arr[i] == 2*arr[j]:
-                return True
-    return False
+
+# def equal(arr):
+#     for i in range(len(arr)):
+#         # print(f'the value is i :{i}')
+#         for j in range(len(arr)):
+#             # print(f'the value is j :{j}')
+#             if i != j and arr[i] == 2*arr[j]:
+#                 return True
+#     return False
 
 
-print(equal(arr=([10, 2, 5, 3])))
+# print(equal(arr=([10, 2, 5, 3])))
+
+# question number 283n
+#  nums = [0,1,0,3,12]
+
+# def zero(nums):
+#     zero_index = 0
+#     for i in range(len(nums)):
+#         if nums[i] != 0:
+#             print(f' this is value of nums [i]:{nums[i]}')
+#             nums[zero_index] = nums[i]
+#             print(
+#                 f'value of nu[zeroin]:{nums[zero_index]} & value of nums [i]:{nums[i]} ')
+#             zero_index += 1
+#             print(f' value of zero-in: {zero_index}')
+
+#     for i in range(zero_index, len(nums)):
+#         nums[i] = 0
+#         print(f" value of nums : {nums[i]}")
+#     return nums
 
 
+# print(zero(nums=[0, 1, 0, 3, 12]))
+# print(zero([0, 1, 0, 3, 12]))
 
+
+# def zero(nums):
+#     last = 0
+#     for i in range(len(nums)):
+#         if nums[i] != 0:
+#             nums[i], nums[last] = nums[last], nums[i]
+#             last += 1
+#     return nums
+
+
+# print(zero([0, 1, 0, 3, 12]))
+
+
+def zeor(lis):
+    lasts = 0
+    for i in range(len(lis)):
+        if lis[i] != 0:
+            lis[i], lis[lasts] = lis[lasts], lis[i]
+            lasts += 1
+    return lis
+
+
+print(zeor([0, 1, 0, 3, 0, 13]))
