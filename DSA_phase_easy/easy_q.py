@@ -180,21 +180,38 @@
 # print(zeor([0, 1, 0, 3, 0, 13]))
 
 
-word = "My name is ariz"
-# my_word = word.split() # is ko karne se space Cancel kar de ga
-for i in word:
-    print(i)
+# word = "My name is ariz"
+# # my_word = word.split() # is ko karne se space Cancel kar de ga
+# for i in word:
+#     print(i)
 
-words = ["My name is ariz"]
-for i in words:
-    count_len = len(i.split())  # agar hame length pata karne hu tu
-    count_word = i.split()  # or loop ke zarye hum ne word count karne he
-    print(count_len)
-    print(count_word)
+# words = ["My name is ariz"]
+# for i in words:
+#     count_len = len(i.split())  # agar hame length pata karne hu tu
+#     count_word = i.split()  # or loop ke zarye hum ne word count karne he
+#     print(count_len)
+#     print(count_word)
 
 
-full_words = ["My name is ariz salman"]
-for i in full_words:
-    arri = i.split()
-    for anx, val in enumerate(arri):
-        print(f'count index :{anx} count value :{val}')
+# full_words = ["My name is ariz salman"]
+# for i in full_words:
+#     arri = i.split()
+#     for anx, val in enumerate(arri):
+#         print(f'count index :{anx} count value :{val}')
+
+# nums = [8, 1, 2, 2, 3]
+def in_num(nums):
+    result = []
+    for i in range(len(nums)):
+        count = 0
+        for j in range(len(nums)):
+            if i != j and nums[j] < nums[i]:
+
+                count += 1
+
+        result.append(count)
+
+    return result
+
+
+print(in_num([8, 1, 2, 2, 3]))
