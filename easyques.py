@@ -98,3 +98,28 @@ def func(nums):
 
 
 print(func([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))
+
+
+nums = [0, 0, 1, 1, 2]
+
+if not nums:
+    print(0)
+else:
+    slow = 0
+    # first element automatically unique
+    print(f"Start: slow={slow}, nums so far: {nums[:slow+1]}")
+
+    for fast in range(1, len(nums)):
+        if nums[fast] != nums[slow]:
+            slow += 1
+            nums[slow] = nums[fast]
+            print(
+                f"Loop {fast}: New unique found → nums so far: {nums[:slow+1]}")
+        else:
+            print(
+                f"Loop {fast}: Duplicate found → nums so far: {nums[:slow+1]} (ignored)")
+
+    # Optionally, last element ko hata sakte ho agar condition me chahiye
+    final_unique = nums[:slow+1]
+    print(
+        f"\nEnd of loop: total unique elements = {len(final_unique)}, unique nums = {final_unique}")
