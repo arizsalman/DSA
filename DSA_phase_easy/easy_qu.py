@@ -30,3 +30,34 @@ def remo(nums, val):
 
 print(remo(nums=[0, 1, 2, 2, 3, 0, 4, 2], val=2))
 print(remo(nums=[3, 2, 2, 3], val=2))
+
+
+# q no 88
+
+
+# nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3
+# n = 0
+# for i in range(len(nums1), -1, -1):
+#     if nums1[n] == nums2[i]:
+#         nums1[i] = nums2[i]
+#         n += 1
+# return n
+
+nums1 = [1, 2, 3, 0, 0, 0]
+m = 3
+nums2 = [2, 5, 6]
+n = 3
+p1 = m-1
+p2 = n-1
+p = m+n-1
+while p2 >= 0:
+    if p1 >= 0 and nums1[p1] > nums2[p2]:
+        nums1[p] = nums1[p1]
+        p1 -= 1
+        print(p1)
+    else:
+        nums1[p] = nums2[p2]
+        p2 -= 1
+    p -= 1
+    print(p)
+print(nums1)
