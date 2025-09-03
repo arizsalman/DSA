@@ -43,21 +43,43 @@ print(remo(nums=[3, 2, 2, 3], val=2))
 #         n += 1
 # return n
 
-nums1 = [1, 2, 3, 0, 0, 0]
-m = 3
-nums2 = [2, 5, 6]
-n = 3
-p1 = m-1
-p2 = n-1
-p = m+n-1
-while p2 >= 0:
-    if p1 >= 0 and nums1[p1] > nums2[p2]:
-        nums1[p] = nums1[p1]
-        p1 -= 1
-        print(p1)
-    else:
-        nums1[p] = nums2[p2]
-        p2 -= 1
-    p -= 1
-    print(p)
-print(nums1)
+# nums1 = [1, 2, 3, 0, 0, 0]
+# m = 3
+# nums2 = [2, 5, 6]
+# n = 3
+# p1 = m-1
+# p2 = n-1
+# p = m+n-1
+# while p2 >= 0:
+#     if p1 >= 0 and nums1[p1] > nums2[p2]:
+#         nums1[p] = nums1[p1]
+#         p1 -= 1
+#         print(p1)
+#     else:
+#         nums1[p] = nums2[p2]
+#         p2 -= 1
+#     p -= 1
+#     print(p)
+# print(nums1)
+
+
+prices = [7, 1, 5, 3, 6, 4]
+prices = [7, 6, 4, 3, 1]
+
+
+def func(prices):
+    min_price = prices[0]
+    max_profite = 0
+
+    for i in range(0, len(prices)):
+        if prices[i] < min_price:
+            min_price = prices[i]
+        else:
+            profit = prices[i] - min_price
+            if profit > max_profite:
+                max_profite = profit
+
+    return max_profite
+
+
+print(func([7, 1, 5, 3, 6, 4]))
