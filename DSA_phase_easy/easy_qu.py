@@ -67,19 +67,30 @@ prices = [7, 1, 5, 3, 6, 4]
 prices = [7, 6, 4, 3, 1]
 
 
-def func(prices):
-    min_price = prices[0]
-    max_profite = 0
+# def func(prices):
+#     min_price = prices[0]
+#     max_profite = 0
 
-    for i in range(0, len(prices)):
-        if prices[i] < min_price:
-            min_price = prices[i]
-        else:
-            profit = prices[i] - min_price
-            if profit > max_profite:
-                max_profite = profit
+#     for i in range(0, len(prices)):
+#         if prices[i] < min_price:
+#             min_price = prices[i]
+#         else:
+#             profit = prices[i] - min_price
+#             if profit > max_profite:
+#                 max_profite = profit
 
-    return max_profite
+#     return max_profite
 
 
-print(func([7, 1, 5, 3, 6, 4]))
+# print(func([7, 1, 5, 3, 6, 4]))
+
+
+def func(nums):
+    n = 0
+    for i in nums:
+        n ^= i
+
+    return n
+
+
+print(func([2, 2, 1]))
