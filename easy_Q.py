@@ -48,20 +48,37 @@ def func(s):
     stack = []
     mapping = {')': '(', '}': '{', ']': '['}
     '''Kyoki closing bracket aate hi check karna hota hai uska matching opening bracket stack ke top pe hai ya nahi, isliye mapping me keys hamesha closing brackets hote hain. ✅'''
-    for char in s:
-        if char in mapping:
-            print(f' d stack {stack}')
-            top = stack.pop() if stack else '#'
-            print(f' is stack : {stack}')
-            if mapping[char] != top:
-                return False
-        else:
-            stack.append(char)
+    # for char in s:
+    #     if char in mapping:
+    #         print(f' d stack {stack}')
+    #         top = stack.pop() if stack else '#'
+    #         print(f' is stack : {stack}')
+    #         if mapping[char] != top:
+    #             return False
+    #     else:
+    #         stack.append(char)
 
-    return not stack
+    # return not stack
 
 
 print(func("([])"))
 # print(func("({{}])"))        # True
 # print(func("()[]{}"))    # True
 # print(func("{[]}"))      # True
+
+
+#  1317
+
+
+def getNoZeroIntegers(n):
+    for a in range(1, n):
+        b = n-a
+        if "0"not in str(a) + str(b):
+            """Agar a ya b ke number ke andar digit 0 hai, to condition False ho jaayegi.
+
+               Agar dono numbers ke andar 0 digit na ho, to condition True ho jaayegi → wahi pair return hoga."""
+            return [a, b]
+    return []
+
+
+print(getNoZeroIntegers(100))
