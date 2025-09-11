@@ -144,7 +144,7 @@ def func(commands, values):
     return result
 
 
-# 🔹 Local test
+
 print(func(
     ["MyStack", "push", "push", "top", "pop", "empty"],
     [[], [1], [2], [], [], []]
