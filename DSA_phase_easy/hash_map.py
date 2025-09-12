@@ -67,21 +67,35 @@
 # ransomNote = "aa", magazine = "aab"
 
 
-def func(ransomNote, magazine):
-    hash_map = {}
-    for i in magazine:
-        if i in hash_map:
-            hash_map[i] += 1
-        else:
-            hash_map[i] = 1
-    for y in ransomNote:
-        if y not in hash_map:
-            return False
-        elif hash_map[y] == 1:
-            del hash_map[y]
-        else:
-            hash_map[y] -= 1
-    return True
+# def func(ransomNote, magazine):
+#     hash_map = {}
+#     for i in magazine:
+#         if i in hash_map:
+#             hash_map[i] += 1
+#         else:
+#             hash_map[i] = 1
+#     for y in ransomNote:
+#         if y not in hash_map:
+#             return False
+#         elif hash_map[y] == 1:
+#             del hash_map[y]
+#         else:
+#             hash_map[y] -= 1
+#     return True
 
 
-print(func(ransomNote="aa", magazine="aab"))
+# print(func(ransomNote="aa", magazine="aab"))
+
+
+# 3227 no
+
+def func(s):
+    vo = set('aeiou')
+    for i in s:
+        if i in vo:
+            return True
+    return False
+
+
+print(func('Asjfi'))
+print(func('zjf'))
