@@ -89,13 +89,51 @@
 
 # 3227 no
 
+# def func(s):
+#     vo = set('aeiou')
+#     for i in s:
+#         if i in vo:
+#             return True
+#     return False
+
+
+# print(func('Asjfi'))
+# print(func('zjf'))
+
+
+# leetcode no 387
+
+
+# s = "leetcode"
+
+# def func(s):
+#     hash_map = {}
+#     for i in s:
+#         if i in hash_map:
+#             hash_map[i] += 1
+#         else:
+#             hash_map[i] = 1
+#     for y in hash_map:
+#         if hash_map[y] == 1:
+#             return y
+#     return -1
+"""ye method sahe he  but ye index nahe pata raha ye value bata raha he  """
+
+# print(func(s="leetcode"))
+
+
 def func(s):
-    vo = set('aeiou')
+    hash_map = {}
     for i in s:
-        if i in vo:
-            return True
-    return False
+        if i in hash_map:
+            hash_map[i] += 1
+        else:
+            hash_map[i] = 1
+    for y in range(len(s)):
+        if hash_map[s[y]]:
+            return y
+    return -1
 
 
-print(func('Asjfi'))
-print(func('zjf'))
+"""ye vlaue ka index  bata raha he agar without enumerate loop me index find karn aho tu [s >ye jis pe loop laga he [y>jo s value de raha he y ko ] ] -->[s[y]] ise index find karte he """
+print(func(s="leetcode"))
