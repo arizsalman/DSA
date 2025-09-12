@@ -137,3 +137,5 @@ def func(s):
 
 """ye vlaue ka index  bata raha he agar without enumerate loop me index find karn aho tu [s >ye jis pe loop laga he [y>jo s value de raha he y ko ] ] -->[s[y]] ise index find karte he """
 print(func(s="leetcode"))
+
+
